@@ -81,7 +81,7 @@ export const MainPage: React.FC = () => {
         </article>
 
         <div className="public-feature-pair">
-          <article className="public-feature public-feature--compact">
+          <article className="public-feature public-feature--compact public-feature--shop">
             <img src={shopImage} alt={isRu ? 'Продукты Pulse Shop' : 'Pulse Shop products'} width="1600" height="900" loading="lazy" />
             <div>
               <p className="public-eyebrow">PULSE SHOP</p>

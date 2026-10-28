@@ -77,6 +77,13 @@
   &--compact { min-height: 500px; }
   &--compact > div { padding: 34px 30px; }
   &--compact h3 { font-size: clamp(2rem, 3vw, 3.2rem); }
+  &--shop > img {
+    inset: 28px;
+    width: calc(100% - 56px);
+    height: calc(100% - 56px);
+    object-fit: contain;
+    object-position: 74% center;
+  }
   &--signal { background: #dff4fb; color: #071621; }
   &--signal::after { display: none; }
   &--signal .public-eyebrow, &--signal a { color: #087eaa; }
@@ -130,5 +137,11 @@
   .public-bank-preview__accounts { padding: 18px; }
   .public-feature { min-height: 520px; }
   .public-feature > div { width: auto; padding: 30px 24px; }
+  .public-feature--shop > img {
+    inset: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    object-position: center;
+  }
   .public-feature-pair { gap: 12px; margin-top: 12px; }
 }
