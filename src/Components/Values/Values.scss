@@ -1,0 +1,164 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.Values {
+  margin-top: var(--component-margin);
+  .AboutValues {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    margin-left: 0;
+    gap: 10rem;
+
+    span {
+      font-family: 'manrope-bold';
+      color: white;
+      font-size: 5rem;
+
+      &::first-letter {
+        font-size: 17rem;
+        color: rgba(255, 255, 255, 0.16);
+        margin-right: -3rem;
+      }
+    }
+
+    &__block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+      row-gap: 3.75rem;
+      max-width: 100%;
+      box-sizing: border-box;
+      .AboutValues__container:nth-child(2n) {
+        text-align: right;
+      }
+      h3,
+      p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+    }
+    @include bp.tablet {
+      grid-template-columns: 1fr;
+      gap: 0rem;
+      margin-left: 0rem;
+      &__block {
+        gap: 3.75rem;
+
+        h3 {
+          font-size: 1.75rem;
+        }
+      }
+      span {
+        font-family: 'manrope-bold';
+        color: rgba(255, 255, 255, 0.16);
+        font-size: 11rem;
+
+        &::first-letter {
+          font-size: 11rem;
+          color: rgba(255, 255, 255, 0.16);
+          margin-right: 0rem;
+        }
+      }
+    }
+    @include bp.phone {
+      &__block {
+        gap: 3.75rem;
+        grid-template-columns: 1fr;
+
+        h3 {
+          font-size: 1.25rem;
+        }
+      }
+      span {
+        font-family: 'manrope-bold';
+        color: rgba(255, 255, 255, 0.16);
+        font-size: 22vw;
+
+        &::first-letter {
+          font-size: 22vw;
+          color: rgba(255, 255, 255, 0.16);
+          margin-right: 0rem;
+        }
+      }
+    }
+  }
+
+  .AboutValues--ru {
+    position: relative;
+
+    span {
+      visibility: hidden;
+    }
+
+    &::before {
+      content: 'НАШИ\AЦЕННОСТИ';
+      white-space: pre;
+      font-family: 'manrope-bold';
+      color: rgba(255, 255, 255, 0.16);
+      font-size: 9rem;
+      position: absolute;
+      top: calc(50% - 2.5rem);
+      z-index: -1;
+      top: 5rem;
+      line-height: 10rem;
+      @include bp.tablet {
+        font-size: 6rem;
+      }
+      @include bp.phone {
+        font-size: 15vw;
+        line-height: 5rem;
+      }
+    }
+  }
+
+  .CaseValues__list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: var(--component-margin);
+    gap: 2.5rem;
+    @include bp.tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include bp.phone {
+      grid-template-columns: 1fr;
+      gap: 1.875rem;
+    }
+    &--container {
+      h3 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        text-transform: uppercase;
+        @include bp.tablet {
+          font-size: 1.5rem;
+        }
+        @include bp.phone {
+          font-size: 1.25rem;
+        }
+      }
+      p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+    }
+  }
+  .ContactValues {
+    span {
+      font-family: 'manrope-bold';
+      color: rgba(255, 255, 255, 0.16);
+      font-size: 6.5rem;
+      display: flex;
+      justify-self: center;
+      @include bp.tablet {
+        font-size: 4.5rem;
+      }
+      @include bp.phone {
+        font-size: 17vw;
+      }
+    }
+    &__list {
+      margin-top: 1.25rem;
+      gap: 2.5rem;
+    }
+  }
+}

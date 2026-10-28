@@ -1,0 +1,51 @@
+.progress-bar-container {
+  &__label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: right;
+  }
+
+  &__bar {
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+    &-fill {
+      height: 100%;
+      background-color: #27ae60;
+    }
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+
+    &__timer {
+      &-circle {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__text {
+      color: rgba(242, 242, 242, 0.8);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+}

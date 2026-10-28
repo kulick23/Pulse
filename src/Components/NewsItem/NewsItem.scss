@@ -1,0 +1,73 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.NewsItem {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 2.5rem;
+  @include bp.tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include bp.phone {
+    grid-template-columns: 1fr;
+  }
+  &__container {
+    h3 {
+      font-size: 2.25rem;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      line-height: 1.3;
+    }
+    p {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-top: 0.625rem;
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+    button {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      margin-top: 3.125rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: var(--arrow-height);
+        height: auto;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    object-position: left center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      @include bp.tablet {
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+.NewsItem.featured {
+  grid-template-columns: 1.5fr 1fr;
+
+  .NewsItem__container {
+    .NewsItem__meta {
+      margin-top: 1.25rem;
+      color: #4f4f4f;
+      font-size: 0.875rem;
+    }
+  }
+  @include bp.tablet {
+    grid-template-columns: 1fr;
+  }
+}

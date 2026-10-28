@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "about": "About us",
+    "services": "Ecosystem",
+    "job": "Careers",
+    "contact": "Contact",
+    "news": "News",
+    "login": "Log in",
+    "profile": "Profile"
+  },
+  "header": {
+    "title": "PULSE BANK",
+    "subtitle": "a financial ecosystem for money, travel, business and shopping"
+  },
+  "Numberslider": {
+    "title1": "User turnover",
+    "title2": "Ecosystem services",
+    "title3": "Covered cities"
+  },
+  "about": {
+    "title": "About us",
+    "text1": "Pulse is shaped as a modern fintech product: one account, smart payments, subscriptions, travel, marketplace offers and business tools in a single interface. The goal is to make banking faster, clearer and more useful.",
+    "button": "More"
+  },
+  "slider": {
+    "title": "Inside the ecosystem",
+    "button": "View all"
+  },
+  "team": {
+    "title": "Team",
+    "text1": "We are building a product team that thinks like a bank, a technology company and an everyday service at the same time. Reliability, speed, transparent pricing and a calm interface are the product core.",
+    "button": "Careers",
+    "text2": "Pulse is a demonstrational fintech product with multi-currency accounts, cards, cashback, travel and business tools.",
+    "author": "Danila, founder of Pulse"
+  },
+  "directions": {
+    "title": "Pulse ecosystem",
+    "titlePop": "Create order",
+    "PageTitle": "Ecosystem services",
+    "All": "All",
+    "subtitle1": "Bank and cards",
+    "text1": "Multi-currency accounts, transfers, cashback and spending control.",
+    "subtitle2": "Travel and hotels",
+    "text2": "Tickets, hotels, insurance and fair exchange rates in one trip flow.",
+    "subtitle3": "Marketplace",
+    "text3": "Partner offers, installments and personal rewards."
+  },
+  "timeline": {
+    "title": "Finance without extra screens and hidden conditions",
+    "subtitle": "Banking, travel and commerce services are grouped around real user scenarios.",
+    "button": "Discuss the idea",
+    "pointTitle1": "One profile",
+    "pointSubtitle1": "Cards, accounts, rewards and subscriptions are connected without manual setup.",
+    "pointTitle2": "Smart scenarios",
+    "pointSubtitle2": "The app suggests where to save, when to pay and how not to lose rewards.",
+    "pointTitle3": "Partner network",
+    "pointSubtitle3": "Hotels, tickets, marketplace and business tools extend the bank beyond payments."
+  },
+  "contact": {
+    "title": "Contact Pulse",
+    "name": "Name",
+    "site": "Company or project",
+    "describe": "Describe the question",
+    "example": "I want to discuss partnership, product or careers",
+    "button": "Send",
+    "resume": "Your resume",
+    "about": "Tell us about yourself",
+    "button2": "Respond"
+  },
+  "faq": {
+    "title": "Frequent questions",
+    "respond": "Respond",
+    "subtitle": "Here you can find information on the most common questions. <br /> You can ask us a question <a>Here</a>",
+    "questions": [
+      {
+        "question": "Is this a real bank?",
+        "answer": "Right now it is a large pet-project and product concept. Banking integrations, KYC and real payments can be connected later."
+      },
+      {
+        "question": "What will be inside the ecosystem?",
+        "answer": "Banking and cards, transfers, subscriptions, travel, hotels, marketplace, partner rewards and later business tools."
+      },
+      {
+        "question": "Will there be a mobile app?",
+        "answer": "The web app already includes accounts, cards, operations, payments and security settings. A mobile client can extend the same journeys separately."
+      },
+      {
+        "question": "Why a dark interface?",
+        "answer": "The dark system is closer to a banking dashboard, keeps accents readable and works well for future cards, transactions and analytics screens."
+      },
+      {
+        "question": "What comes next?",
+        "answer": "The next stage is stronger architecture, accessibility, failure handling and preparation for real banking integrations."
+      }
+    ]
+  },
+  "footer": {
+    "title": "For additional questions",
+    "button": "Contact us"
+  },
+  "TeamAbout": {
+    "text": "Pulse is a fintech ecosystem concept where the bank does not end with a card and transfers.<br/><br/>Payments, travel, hotels, marketplace, subscriptions, personal offers and spending analytics are combined into one product layer. The user sees a clear system around daily decisions instead of scattered sections.<br/><br/>The demo already includes personal banking, business accounts, investing, insurance, travel, mobile and marketplace journeys. The next layer is real integrations, identity and payment infrastructure."
+  },
+  "Values": {
+    "courage": "TRANSPARENCY",
+    "courage-text": "Users should see fees, rates and conditions before an action.",
+    "perseverance": "SPEED",
+    "perseverance-text": "Payments, transfers and services should work without extra steps.",
+    "reliability": "RELIABILITY",
+    "reliability-text": "Money, data and transactions need calm and understandable protection.",
+    "responsibility": "UTILITY",
+    "responsibility-text": "Every ecosystem service should solve a real user scenario.",
+    "bravery": "Security",
+    "bravery-text": "Device, limit and confirmation controls are always close.",
+    "persistence": "Ecosystem",
+    "persistence-text": "Banking, travel, marketplace and business services work as one product.",
+    "carears": "Careers",
+    "carears-text": "hr@pulsebank.dev",
+    "sales": "Sales",
+    "sales-text": "partners@pulsebank.dev",
+    "marketing": "Marketing",
+    "marketing-text": "media@pulsebank.dev",
+    "general": "General",
+    "general-text": "hello@pulsebank.dev"
+  },
+  "vacancies": {
+    "respons": "Responsibilities",
+    "requir": "Requirements"
+  },
+  "login": {
+    "title": "Welcome back",
+    "subtitle": "Please enter your contact details to connect.",
+    "email": "Email address",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot password",
+    "button": "Log in",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create account"
+  },
+  "recovery": {
+    "title": "Password Recovery",
+    "subtitle": "Enter your email to receive a recovery code",
+    "email": "Email address",
+    "verificationCode": "Verification code",
+    "password": "New password",
+    "confirmPassword": "Confirm password",
+    "getCode": "Get code",
+    "codeSent": "Recovery code has been sent to your email",
+    "button": "Update password",
+    "backToLogin": "Back to login"
+  },
+  "confirmation": {
+    "title": "Confirmation",
+    "registerSubtitle": "Enter the code received at your email address to complete account creation",
+    "resetSubtitle": "Enter the code received at your email address to reset your password",
+    "resendCode": "Didn't receive the code? Resend",
+    "resendDisabled": "Resend",
+    "registerButton": "Create account",
+    "resetButton": "Reset password"
+  },
+  "registration": {
+    "title": "Create account",
+    "subtitle": "Please fill in your details",
+    "email": "Email address",
+    "inn": "INN",
+    "companyName": "Company name",
+    "companyNamePlaceholder": "Company name",
+    "director": "Director",
+    "directorPlaceholder": "First Name Last Name",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "remember": "Remember me",
+    "button": "Create account",
+    "getCode": "Get code",
+    "verificationCode": "Verification code",
+    "codeSent": "Verification code has been sent to your email",
+    "submit": "Create account",
+    "haveAccount": "Already have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "login": "Log in"
+  },
+  "news": {
+    "latest": "The latest news",
+    "more": "Read More",
+    "all": "All posts",
+    "next": "Next >",
+    "prev": "< Prev"
+  },
+  "policy": {
+    "title": "Privacy Policy",
+    "update": "Last updated on 23 October 2026"
+  },
+  "ServiceItem": {
+    "title": "Service",
+    "contact": "Contact",
+    "offer": "We offer",
+    "found": "Service not found",
+    "form": "Request"
+  },
+  "validation": {
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email format",
+    "innRequired": "INN is required",
+    "innInvalid": "INN must contain exactly 10 digits",
+    "companyNameRequired": "Company name is required",
+    "directorRequired": "Director name is required",
+    "passwordRequired": "Password is required",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "confirmPasswordRequired": "Confirm password is required",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "codeRequired": "Verification code is required",
+    "codeInvalid": "Invalid verification code"
+  },
+  "common": {
+    "loading": "Loading...",
+    "showPassword": "Show",
+    "hidePassword": "Hide"
+  },
+  "profile": {
+    "company": "Your company",
+    "ordersButton": "Your orders",
+    "supportButton": "Support",
+    "createOrder": "Create order",
+    "haveQuestions": "Have questions? Contact us",
+    "companyInfo": {
+      "companyName": "Company name",
+      "inn": "INN",
+      "manager": "Manager",
+      "email": "Company email",
+      "phone": "Phone",
+      "website": "Website",
+      "address": "Legal address",
+      "activity": "Main activity",
+      "activityPlaceholder": "Development of custom software solutions for business, including mobile applications, web applications and cloud services. (46.69.9.)",
+      "note": "Note",
+      "notePlaceholder": "Write a few comments about the legal company if you think it's necessary.",
+      "save": "Save data"
+    },
+    "orders": {
+      "inProgress": "In progress",
+      "completed": "Completed",
+      "paid": "Paid",
+      "waitingPayment": "Waiting for payment",
+      "progress": "Progress:",
+      "done": "Done",
+      "suspended": "Suspended. Waiting for payment.",
+      "taskItem": "Task name",
+      "payButton": "Pay"
+    },
+    "support": {
+      "greeting": "Hello! How can I help you?",
+      "userQuestion": "I have a question about my order",
+      "supportResponse1": "Of course, I'm ready to help. Please specify your order number.",
+      "orderNumber": "Order #12345",
+      "supportResponse2": "Thank you for the information. Your order is being processed. Expected delivery date is tomorrow.",
+      "autoResponse": "Thank you for your message. We will review your request as soon as possible.",
+      "inputPlaceholder": "Type your message...",
+      "send": "Send"
+    }
+  },
+  "popup": {
+    "close": "Close",
+    "createOrder": "Create Order",
+    "awards": "Achieve New Heights",
+    "hire": "We seek and implement unique ways to help you achieve a leading position in your industry.",
+    "more": "Learn more about this service",
+    "describe": "Describe your task",
+    "fill": "Fill in the details",
+    "desc": "Order Description",
+    "add": "Attach a file",
+    "insert": "Click or drag file",
+    "contact": "Tell us what you need to do. We will contact you using your profile's contact details and discuss all the details!",
+    "send": "Send",
+    "sending": "Sending...",
+    "upload": "Upload check",
+    "uploading": "Uploading ...",
+    "download": "Download check"
+  }
+}

@@ -1,0 +1,27 @@
+@use '../../Styles/breakpoints' as bp;
+
+.NewsPage {
+  margin-top: var(--component-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  &__pagination {
+    &--button {
+      display: flex;
+      justify-self: center;
+      border: none;
+      padding: 0;
+      &:hover {
+        background-color: transparent;
+        color: white;
+        img {
+          filter: none;
+        }
+      }
+    }
+  }
+}

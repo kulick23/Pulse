@@ -1,0 +1,75 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.numberSlider {
+  display: flex;
+  gap: 3.44rem;
+  text-align: center;
+  justify-content: center;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__count {
+    font-family: monospace;
+    display: inline-block;
+    min-width: 6ch;
+    text-align: center;
+    margin-block-end: 0;
+  }
+
+  &__text {
+    margin-block-start: 0;
+    font-size: 1.19rem;
+  }
+
+  &__marquee {
+    margin-top: 2rem;
+    @include bp.phone {
+      margin-left: -0.9375rem;
+      margin-right: -0.9375rem;
+    }
+  }
+
+  &__marqueeItem {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  @include bp.tablet {
+    gap: 1.25rem;
+    &__count {
+      font-size: 2.25rem;
+    }
+    &__text {
+      font-size: 0.875rem;
+    }
+    &__marquee {
+      margin-top: 1rem;
+    }
+    &__marqueeItem {
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+  }
+  @include bp.phone {
+    &__count {
+      font-size: 1.25rem;
+    }
+    &__marqueeItem {
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+  }
+}
+.numberService {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--component-margin);
+  @include bp.phone {
+    display: flex;
+    flex-direction: column;
+  }
+}

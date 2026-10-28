@@ -1,0 +1,289 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.timeline {
+  margin-top: var(--component-margin);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    .timeline__top {
+      max-width: 50rem;
+      z-index: 1;
+
+      p {
+        max-width: 25rem;
+        padding-top: 1rem;
+      }
+
+      h2,
+      p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        line-height: 1.2;
+      }
+      button {
+        margin-top: 3.125rem;
+      }
+    }
+
+    .timeline__bottom {
+      .timeline__images {
+        display: flex;
+        position: relative;
+        margin-top: -10.5rem;
+        padding-left: 4.5625rem;
+
+        .timeline__img-line {
+          width: 100%;
+          height: auto;
+        }
+
+        .timeline__img-line--tablet,
+        .timeline__img-line--mobile {
+          display: none;
+        }
+
+        .timeline__decor--mobile {
+          display: none;
+        }
+
+        @include bp.tablet {
+          padding-left: 0rem;
+          .timeline__img-line--desktop {
+            display: none;
+          }
+          .timeline__img-line--tablet {
+            display: block;
+            width: auto;
+            height: 20%;
+            margin-top: 14rem;
+          }
+        }
+
+        @include bp.phone {
+          padding-left: 4.5625rem;
+          .timeline__img-line--tablet {
+            display: none;
+          }
+          .timeline__img-line--mobile {
+            display: block;
+            width: auto;
+            height: 20%;
+            margin-top: 14rem;
+            margin-left: -5rem;
+          }
+
+          .timeline__decor--desktop {
+            display: none;
+          }
+          .timeline__decor--mobile {
+            display: block;
+          }
+        }
+
+        .timeline__decor1-wrapper,
+        .timeline__decor2-wrapper,
+        .timeline__decor3-wrapper {
+          position: absolute;
+        }
+
+        .timeline__decor1-wrapper {
+          top: 0%;
+          right: 10%;
+
+          @include bp.tablet {
+            top: 50rem;
+            left: 10rem;
+          }
+          @include bp.phone {
+            top: 36rem;
+            left: 3.8rem;
+          }
+
+          &::before {
+            content: '3';
+            font-family: 'manrope-bold';
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8.125rem;
+            color: rgba(168, 162, 162, 0.4);
+
+            @include bp.tablet {
+              top: -5rem;
+              left: 22rem;
+              @media (max-width: 584px) {
+                left: 100%;
+              }
+            }
+            @include bp.phone {
+              top: -1.7rem;
+              left: 13rem;
+              font-size: 3.68rem;
+            }
+          }
+        }
+
+        .timeline__decor2-wrapper {
+          top: 47%;
+          left: 48%;
+
+          @include bp.tablet {
+            top: 35rem;
+            left: 5.7rem;
+          }
+          @include bp.phone {
+            top: 26.5rem;
+            left: 3rem;
+          }
+
+          &::before {
+            content: '2';
+            font-family: 'manrope-bold';
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8.125rem;
+            color: rgba(168, 162, 162, 0.4);
+
+            @include bp.tablet {
+              top: -6rem;
+              left: 23.5rem;
+              @media (max-width: 540px) {
+                left: 60vw;
+              }
+            }
+            @include bp.phone {
+              top: -2.5rem;
+              left: 13.5rem;
+              font-size: 3.68rem;
+            }
+          }
+        }
+
+        .timeline__decor3-wrapper {
+          bottom: 15%;
+          left: 12%;
+
+          @include bp.tablet {
+            top: 20rem;
+            left: 0rem;
+          }
+          @include bp.phone {
+            top: 17rem;
+            left: 0.5rem;
+          }
+
+          &::before {
+            content: '1';
+            font-family: 'manrope-bold';
+            position: absolute;
+            bottom: 50%;
+            left: 40%;
+            transform: translateX(-50%);
+            font-size: 8.125rem;
+            color: rgba(168, 162, 162, 0.4);
+
+            @include bp.tablet {
+              top: -5rem;
+              left: 27rem;
+              @media (max-width: 540px) {
+                left: 80vw;
+              }
+            }
+            @include bp.phone {
+              top: -3rem;
+              left: 15rem;
+              font-size: 3.68rem;
+            }
+          }
+        }
+      }
+
+      .timeline__steps {
+        display: grid;
+        grid-template-columns: 35% 25% 23%;
+        justify-content: space-between;
+
+        @include bp.tablet {
+          grid-template-columns: 100%;
+        }
+
+        h4 {
+          margin-block-end: 0;
+          line-height: 1.2;
+        }
+
+        .timeline__step1,
+        .timeline__step2,
+        .timeline__step3 {
+          opacity: 0;
+          transform: translateY(20px);
+          transition:
+            opacity 1s ease-out,
+            transform 1s ease-out;
+          @include bp.phone {
+            p {
+              font-size: 0.75rem;
+            }
+          }
+        }
+
+        .timeline__step1.animate,
+        .timeline__step2.animate,
+        .timeline__step3.animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .timeline__step1 {
+          margin-top: -3rem;
+          margin-left: 3rem;
+          @include bp.tablet {
+            margin-top: -50rem;
+            margin-left: 7rem;
+            max-width: 22.5rem;
+          }
+          @include bp.phone {
+            margin-top: -33.5rem;
+            margin-left: 4.5rem;
+            max-width: 11.5rem;
+          }
+        }
+
+        .timeline__step2 {
+          margin-top: -12rem;
+          margin-left: 1rem;
+          @include bp.tablet {
+            margin-top: -34.5rem;
+            margin-left: 13rem;
+            max-width: 18rem;
+          }
+          @include bp.phone {
+            margin-top: -22.5rem;
+            margin-left: 7rem;
+            max-width: 11rem;
+          }
+        }
+
+        .timeline__step3 {
+          margin-top: -25rem;
+          margin-left: 3.5rem;
+          @include bp.tablet {
+            margin-top: -19rem;
+            margin-left: 18rem;
+            max-width: 15.5rem;
+          }
+          @include bp.phone {
+            margin-top: -12rem;
+            margin-left: 7.5rem;
+            max-width: 11rem;
+          }
+        }
+      }
+    }
+  }
+}

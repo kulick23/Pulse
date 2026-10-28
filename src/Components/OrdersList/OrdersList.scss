@@ -1,0 +1,69 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.orders-list {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @include bp.tablet {
+    padding: 0px;
+  }
+
+  .order-columns {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: bp.$breakpoint_tablet_max) {
+      flex-direction: column;
+    }
+
+    .order-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .column-header {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        margin-bottom: 15px;
+
+        h2 {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 500;
+          color: #fff;
+        }
+
+        &.inProgress {
+          background: rgba(74, 141, 242, 0.2);
+          border-radius: 6px;
+
+          h2 {
+            color: #2f80ed;
+          }
+        }
+
+        &.completed {
+          background: rgba(39, 174, 96, 0.2);
+
+          h2 {
+            color: #27ae60;
+          }
+        }
+
+        &.waitingPayment {
+          background: rgba(194, 113, 0, 0.4);
+        }
+      }
+
+      .column-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+}

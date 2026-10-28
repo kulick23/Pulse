@@ -1,0 +1,35 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.resend-code {
+  display: block;
+  margin-bottom: 2rem;
+  color: rgba(254, 254, 254, 0.3);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+  margin: 0;
+  padding-bottom: 50px;
+  padding-top: 15px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include bp.phone {
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+  }
+}

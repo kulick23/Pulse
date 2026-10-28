@@ -1,0 +1,116 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.Team {
+  margin-top: var(--component-margin);
+  &__block {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+
+    .Team__container {
+      margin-left: 3rem;
+
+      h2,
+      p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+
+      button {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:hover {
+          img {
+            filter: brightness(0);
+          }
+        }
+
+        img {
+          height: var(--arrow-height);
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      justify-self: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    @include bp.tablet {
+      grid-template-columns: 100%;
+      gap: 2.5rem;
+      img {
+        order: 2;
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+      .Team__container {
+        order: 1;
+        margin-left: 0;
+      }
+    }
+  }
+  &__quote {
+    margin: var(--component-margin) 15.5rem 0 15.5rem;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: '“';
+      position: absolute;
+      left: -5rem;
+      top: -5rem;
+      font-size: 13rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &::after {
+      content: '”';
+      position: absolute;
+      right: -5rem;
+      bottom: -10rem;
+      font-size: 13rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    @include bp.tablet {
+      margin: var(--component-margin) 4rem 0 4rem;
+      &::before {
+        top: -3.5rem;
+        left: -4rem;
+        font-size: 8.125rem;
+      }
+
+      &::after {
+        font-size: 8.125rem;
+        bottom: -5.5rem;
+        right: -4rem;
+      }
+    }
+    @include bp.phone {
+      p {
+        font-size: 0.75rem;
+      }
+      &::before {
+        top: -2rem;
+        left: -3rem;
+        font-size: 5rem;
+      }
+      &::after {
+        font-size: 5rem;
+        bottom: -3rem;
+        right: -3rem;
+      }
+    }
+  }
+}

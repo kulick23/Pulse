@@ -1,0 +1,12 @@
+.slider {
+  margin-top: var(--component-margin);
+  overflow: hidden;
+  button {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+
+    img {
+      height: var(--arrow-height);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.TeamAbout {
+  margin-top: var(--component-margin);
+  width: 100%;
+  position: relative;
+
+  p {
+    margin-right: 40%;
+  }
+
+  &::after {
+    content: 'TEAM';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    font-family: 'manrope-bold';
+    transform: translateY(-50%);
+    font-size: 17rem;
+    color: rgba(255, 255, 255, 0.16);
+  }
+  @include bp.tablet {
+    p {
+      margin-right: 0%;
+      padding-top: 5rem;
+    }
+    &::after {
+      left: 0;
+      top: 0%;
+      font-size: 11rem;
+    }
+  }
+  @include bp.phone {
+    &::after {
+      font-size: 30vw;
+    }
+  }
+  &.TeamAbout--ru {
+    &::after {
+      content: 'КОМАНДА';
+      position: absolute;
+      right: 6%;
+      top: 5%;
+      font-family: 'manrope-bold';
+      transform: translateY(-50%);
+      font-size: 9rem;
+      color: rgba(255, 255, 255, 0.16);
+      @include bp.tablet {
+        left: 0;
+        top: 0%;
+        font-size: 4rem;
+      }
+      @include bp.phone {
+        font-size: 16.5vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,263 @@
+@use './breakpoints' as bp;
+@use './inputs.scss';
+
+:root {
+  --background-color: #020a12;
+  --surface-color: rgba(16, 31, 45, 0.84);
+  --surface-color-strong: rgba(24, 42, 58, 0.94);
+  --border-color: rgba(183, 208, 240, 0.14);
+  --accent-color: #b9d4ff;
+  --accent-color-strong: #64d2ff;
+  --gray-color: #8ea0b4;
+  --black-color: #020a12;
+  --component-margin: 8.5rem;
+  --arrow-height: 0.8rem;
+}
+
+@font-face {
+  font-family: 'manrope';
+  src: url('../Assets/Fonts/manrope.light.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'manrope-light';
+  src: url('../Assets/Fonts/manrope.thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'manrope-bold';
+  src: url('../Assets/Fonts/manrope.extrabold.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('../Assets/Fonts/manrope.thin.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('../Assets/Fonts/manrope.regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('../Assets/Fonts/manrope.extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'manrope';
+  color: white;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  background: #020a12;
+}
+
+* { box-sizing: border-box; }
+
+html { background: #020a12; }
+
+:focus-visible {
+  outline: 2px solid #72d9ff;
+  outline-offset: 3px;
+}
+
+.route-loading {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 14px;
+  min-height: 100vh;
+  background: #06141f;
+
+  span {
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgba(114, 217, 255, 0.22);
+    border-top-color: #72d9ff;
+    border-radius: 50%;
+    animation: route-loading-spin 700ms linear infinite;
+  }
+
+  p { margin: 0; color: #eef6fb; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+}
+
+@keyframes route-loading-spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) { .route-loading span { animation: none; } }
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: rgba(221, 234, 249, 0.76);
+}
+
+li {
+  font-family: 'manrope-light';
+  font-size: 1.125rem;
+}
+
+small {
+  font-size: 1.1875rem;
+  font-family: 'manrope-light';
+  color: rgba(189, 189, 189, 1);
+}
+
+button {
+  cursor: pointer;
+  background-color: rgba(185, 212, 255, 0.08);
+  color: white;
+  white-space: nowrap;
+  font-size: 1.125rem;
+  display: flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+  &:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #06101b;
+    transform: translateY(-1px);
+    img {
+      filter: brightness(0);
+    }
+  }
+}
+
+.app-error {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: #07111d;
+  background: #f5f7f9;
+  text-align: center;
+
+  > span {
+    color: #2458dc;
+    font-size: 0.72rem;
+    font-weight: 750;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 560;
+  }
+
+  p {
+    margin: 0;
+    color: #61707c;
+  }
+
+  button,
+  a {
+    min-height: 2.8rem;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    margin-top: 0.5rem;
+    border: 0;
+    color: #fff;
+    background: #07111d;
+  }
+
+  a {
+    color: #2458dc;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+@include bp.tablet {
+  :root {
+    --component-margin: 7.5rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+@include bp.phone {
+  :root {
+    --component-margin: 5rem;
+    --arrow-height: 0.7rem;
+  }
+  button {
+    font-size: 0.875rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+  small {
+    font-size: 0.875rem;
+  }
+}

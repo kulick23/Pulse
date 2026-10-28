@@ -1,0 +1,215 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.order-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* фон для карточек в работе */
+  background-color: rgba(74, 141, 242, 0.2);
+  border-radius: 8px;
+
+  /* пусть карточка растёт по содержимому */
+  height: auto;
+  min-height: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      display: flex;
+      padding: 5px 10px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+
+      &.paid {
+        color: #27ae60;
+      }
+    }
+  }
+
+  &__notification {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-badge {
+      display: flex;
+      width: 22px;
+      height: 22px;
+      justify-content: center;
+      align-items: center;
+      background: #1b2745;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #2f80ed;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    padding: 0 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  &__progress {
+    padding: 0 20px;
+  }
+
+  &__tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    margin-top: 15px;
+  }
+
+  &__task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  /* Badge for unread task */
+  &__task-badge {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    background: #1b2745;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #2f80ed;
+    margin-left: 10px;
+  }
+
+  &__task-text {
+    flex: none;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+
+    &.done {
+      color: rgba(39, 174, 96, 0.7);
+    }
+  }
+
+  &__tasks-container {
+    position: relative;
+    padding: 0 20px 20px;
+    margin-top: auto;
+  }
+
+  &__tasks-btn {
+    position: relative;
+    background: rgba(26, 25, 26, 1);
+    border: 1px solid rgba(215, 215, 215, 0.17);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 200ms;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-self: center;
+    margin-bottom: -20px;
+    &:hover {
+      background: rgba(26, 25, 26, 1) !important;
+      border: 1px solid rgba(215, 215, 215, 0.17) !important;
+      color: #fff !important;
+    }
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: white;
+      width: clamp(0.5rem, 0.3461538462rem + 0.7692307692vw, 0.6375rem);
+      height: 2px;
+      transition: transform 200ms linear;
+    }
+
+    &::before {
+      top: 50%;
+      left: 49%;
+      transform: translate(-75%, -50%) rotate(40deg);
+    }
+
+    &::after {
+      top: 50%;
+      left: 49%;
+      transform: translate(0, -50%) rotate(-40deg);
+    }
+
+    &[aria-expanded='true']::before {
+      transform: translateX(-75%) rotate(-40deg);
+    }
+
+    &[aria-expanded='true']::after {
+      transform: rotate(40deg);
+    }
+  }
+  &__tasks-list {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      max-height 300ms ease,
+      opacity 200ms ease 100ms; // opacity чуть позже
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+
+    /* при открытии отпускаем ограничение по высоте */
+    &--open {
+      max-height: 500px; // достаточно, чтобы уместить все таски
+      opacity: 1;
+    }
+  }
+
+  &.paid {
+    /* фон для завершённых карточек */
+    background-color: rgba(39, 174, 96, 0.2);
+
+    /* целимся в элемент .order-card__progress внутри .order-card.paid */
+    .order-card__progress {
+      /* текст даты */
+      .progress-bar-container__date__text {
+        color: rgba(39, 174, 96, 1) !important;
+      }
+      /* иконка-круг */
+      .progress-bar-container__date__timer-circle {
+        // красим только внешний круг
+        > circle:first-of-type {
+          stroke: rgba(39, 174, 96, 1) !important;
+        }
+        > path {
+          fill: rgba(39, 174, 96, 1) !important;
+        }
+      }
+    }
+  }
+}

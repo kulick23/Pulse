@@ -1,0 +1,9 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.LoginPage {
+  margin-top: var(--component-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

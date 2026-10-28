@@ -1,0 +1,110 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.Quote {
+  margin-top: var(--component-margin);
+
+  &__block {
+    display: grid;
+    align-items: center;
+    gap: 4rem;
+
+    .Quote__quote {
+      margin: 0 4rem 0 4rem;
+      text-align: center;
+      position: relative;
+
+      h4,
+      p {
+        font-size: 1.125rem;
+      }
+
+      @include bp.tablet {
+        h4 {
+          font-size: 1.25rem;
+        }
+        p {
+          font-size: 0.875rem;
+        }
+      }
+
+      &::before {
+        content: '“';
+        position: absolute;
+        left: -3rem;
+        top: -3rem;
+        font-size: 9rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      &::after {
+        content: '”';
+        position: absolute;
+        right: -3rem;
+        bottom: -6rem;
+        font-size: 9rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      @include bp.phone {
+        &::before {
+          top: -1rem;
+          left: -2rem;
+          font-size: 5rem;
+        }
+        &::after {
+          font-size: 5rem;
+          bottom: -2rem;
+          right: -2rem;
+        }
+      }
+    }
+
+    .Quote__image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      justify-self: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &.Quote--en {
+    .Quote__block {
+      grid-template-columns: 1fr;
+      .Quote__quote {
+        margin: 0 15.5rem 0 15.5rem;
+        @include bp.tablet {
+          margin: 0 4rem 0 4rem;
+        }
+      }
+    }
+  }
+  &.Quote--ru {
+    .Quote__block {
+      grid-template-columns: 45% 55%;
+      @include bp.tablet {
+        grid-template-columns: 100%;
+        gap: 2.5rem;
+
+        .Quote__image {
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+      }
+
+      @include bp.phone {
+        grid-template-columns: 100%;
+        gap: 2.5rem;
+
+        .Quote__quote {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

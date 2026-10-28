@@ -1,0 +1,142 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.contact {
+  margin-top: var(--component-margin);
+
+  &__email {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &--form {
+    margin-top: 0;
+    width: 100%;
+    .contact__form {
+      gap: 3.125rem;
+    }
+
+    .contact__button {
+      width: auto;
+      align-self: flex-start;
+    }
+  }
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    margin-bottom: 1rem;
+    @include bp.tablet {
+      grid-template-columns: 1fr;
+      gap: 3.125rem;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__method-selector {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__method {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+    color: #747474;
+  }
+
+  &__method-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #747474;
+  }
+
+  &__method.selected {
+    color: white;
+  }
+
+  &__method.selected .contact__method-dot {
+    background-color: rgba(242, 33, 33, 1);
+  }
+  &__input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 0.5rem 0;
+    outline: none;
+    &::placeholder {
+      font-size: 1rem;
+      color: #747474;
+    }
+  }
+  .custom-file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 1px solid white;
+    padding: 0.12rem 0;
+
+    img {
+      width: auto;
+      height: 1.25rem;
+    }
+
+    span {
+      font-size: 1rem;
+      color: #747474;
+      white-space: nowrap;
+    }
+  }
+
+  &__question {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+
+  &__textarea-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 6.25rem;
+    @include bp.tablet {
+      grid-template-columns: 1fr;
+      gap: 3.125rem;
+      margin-top: 3.125rem;
+    }
+  }
+
+  &__textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 0.5rem 0;
+    outline: none;
+    &::placeholder {
+      font-size: 1rem;
+      color: #747474;
+    }
+  }
+
+  &__button {
+    padding: 1rem 2.5rem;
+    @include bp.tablet {
+      max-width: 8.375rem;
+    }
+  }
+}

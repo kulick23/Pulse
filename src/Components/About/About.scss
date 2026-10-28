@@ -1,0 +1,53 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.About {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  margin-top: var(--component-margin);
+
+  &__container {
+    margin-right: 3rem;
+
+    h2,
+    p {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    button {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: var(--arrow-height);
+        height: auto;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    justify-self: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @include bp.tablet {
+    grid-template-columns: 100%;
+    gap: 2.5rem;
+
+    img {
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

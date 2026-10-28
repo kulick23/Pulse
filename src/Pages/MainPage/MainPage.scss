@@ -1,0 +1,134 @@
+.public-home { background: #f5f7f9; color: #0a1822; }
+
+.public-section {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 120px 0;
+
+  &__heading {
+    max-width: 760px;
+    margin-bottom: 50px;
+    &--wide { max-width: 980px; }
+    h2 { margin: 14px 0 20px; font-family: 'Manrope', sans-serif; font-size: clamp(2.5rem, 5.4vw, 5rem); font-weight: 400; line-height: 1; letter-spacing: 0; }
+    > p:last-child { max-width: 650px; color: #536370; font-size: 1.1rem; line-height: 1.6; }
+  }
+}
+
+.public-bank-preview {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  min-height: 540px;
+  overflow: hidden;
+  border: 1px solid #dbe2e7;
+  border-radius: 8px;
+  background: #06141f;
+  color: #edf6fb;
+  box-shadow: 0 34px 70px rgba(31, 53, 68, 0.12);
+
+  &__accounts {
+    display: flex; flex-direction: column; gap: 10px; padding: 40px 22px;
+    border-right: 1px solid rgba(185, 212, 255, 0.13);
+    > span { color: #7f96a7; font-size: 0.82rem; }
+    > strong { margin-bottom: 30px; font-size: 2rem; font-weight: 550; }
+    button { justify-content: space-between; min-height: 58px; padding: 0 16px; border-color: rgba(185, 212, 255, 0.13); background: #0d2231; color: #edf6fb; font-size: 0.9rem; pointer-events: none; }
+    small { color: #8fa5b5; font-family: inherit; font-size: 0.78rem; }
+  }
+
+  &__main { padding: 40px; }
+  &__main > header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    div { display: grid; gap: 8px; }
+    span { color: #8299aa; font-size: 0.82rem; }
+    strong { font-size: 1.5rem; font-weight: 550; }
+    a { color: #72d9ff; font-size: 0.9rem; }
+  }
+
+  &__metrics {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 50px 0 22px;
+    div { display: grid; gap: 7px; padding: 22px; border: 1px solid rgba(185, 212, 255, 0.13); border-radius: 6px; background: #0b1e2c; }
+    span { color: #8398a8; font-size: 0.8rem; }
+    strong { font-size: 1.45rem; font-weight: 500; }
+  }
+
+  &__transactions > div {
+    display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; align-items: center; gap: 14px; min-height: 76px;
+    border-bottom: 1px solid rgba(185, 212, 255, 0.12);
+    > strong { font-size: 0.9rem; }
+    .is-income { color: #6de0a4; }
+  }
+
+  &__initials { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #12354a; color: #72d9ff !important; font-weight: 700; }
+  &__transactions p { display: grid; gap: 4px; margin: 0; color: #edf6fb; }
+  &__transactions p strong { font-size: 0.9rem; }
+  &__transactions p small { color: #8299aa; font-family: inherit; font-size: 0.78rem; }
+}
+
+.public-ecosystem { border-top: 1px solid #dbe2e7; }
+
+.public-feature {
+  position: relative; min-height: 620px; overflow: hidden; border-radius: 8px; background: #071621; color: #f4f8fb;
+  > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  &::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(3, 12, 19, 0.88), rgba(3, 12, 19, 0.08)); }
+  > div { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; width: min(520px, calc(100% - 64px)); min-height: inherit; padding: 44px 40px; }
+  h3 { margin: 12px 0 16px; font-family: 'Manrope', sans-serif; font-size: clamp(2.1rem, 4vw, 4rem); font-weight: 400; line-height: 1.05; letter-spacing: 0; }
+  p:not(.public-eyebrow) { max-width: 470px; color: rgba(244, 248, 251, 0.72); line-height: 1.55; }
+  a { margin-top: 18px; color: #f4f8fb; font-weight: 650; }
+  &-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+  &--compact { min-height: 500px; }
+  &--compact > div { padding: 34px 30px; }
+  &--compact h3 { font-size: clamp(2rem, 3vw, 3.2rem); }
+  &--signal { background: #dff4fb; color: #071621; }
+  &--signal::after { display: none; }
+  &--signal .public-eyebrow, &--signal a { color: #087eaa; }
+  &--signal p:not(.public-eyebrow) { color: #536773; }
+}
+
+.public-signal {
+  display: flex; align-items: flex-end; gap: 10px; height: 110px; margin: 35px 0 10px;
+  i { display: block; width: 24px; border-radius: 3px 3px 0 0; background: #0aa7df; }
+  i:nth-child(1) { height: 28px; }
+  i:nth-child(2) { height: 50px; }
+  i:nth-child(3) { height: 78px; }
+  i:nth-child(4) { height: 108px; }
+}
+
+.public-security {
+  display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 80px; border-top: 1px solid #dbe2e7;
+  h2 { margin: 16px 0 0; font-size: clamp(2.5rem, 4.5vw, 4.4rem); font-weight: 400; line-height: 1; }
+  ul { margin: 0; padding: 0; }
+  li { display: grid; grid-template-columns: 52px 1fr; align-items: center; min-height: 96px; border-bottom: 1px solid #ced8de; font-family: inherit; }
+  li:first-child { border-top: 1px solid #ced8de; }
+  li span { color: #0798ce; font-size: 0.8rem; }
+  li strong { font-size: 1.05rem; font-weight: 550; }
+}
+
+.public-cta {
+  width: auto; max-width: none; padding: 100px max(24px, calc((100vw - 1180px) / 2)); background: #06141f; color: #f4f8fb;
+  h2 { margin: 14px 0 18px; font-size: clamp(2.8rem, 6vw, 5.6rem); font-weight: 400; line-height: 1; }
+  > p:not(.public-eyebrow) { max-width: 550px; color: #91a5b3; }
+  .public-button { margin-top: 28px; }
+}
+
+@media (max-width: 820px) {
+  .public-section { width: min(100% - 32px, 1180px); padding: 78px 0; }
+  .public-bank-preview { grid-template-columns: 1fr; }
+  .public-bank-preview__accounts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 24px; border-right: 0; border-bottom: 1px solid rgba(185, 212, 255, 0.13); }
+  .public-bank-preview__accounts > span, .public-bank-preview__accounts > strong { grid-column: 1 / -1; }
+  .public-bank-preview__accounts > strong { margin-bottom: 12px; }
+  .public-bank-preview__accounts button { display: grid; gap: 4px; padding: 10px; }
+  .public-feature-pair, .public-security { grid-template-columns: 1fr; }
+  .public-security { gap: 42px; }
+}
+
+@media (max-width: 560px) {
+  .public-bank-preview__main { padding: 24px 18px; }
+  .public-bank-preview__main > header strong { font-size: 1.1rem; }
+  .public-bank-preview__metrics { margin-top: 32px; }
+  .public-bank-preview__metrics div { padding: 16px 12px; }
+  .public-bank-preview__metrics strong { font-size: 1rem; }
+  .public-bank-preview__transactions > div { grid-template-columns: 38px minmax(0, 1fr) auto; gap: 9px; }
+  .public-bank-preview__accounts { padding: 18px; }
+  .public-feature { min-height: 520px; }
+  .public-feature > div { width: auto; padding: 30px 24px; }
+  .public-feature-pair { gap: 12px; margin-top: 12px; }
+}

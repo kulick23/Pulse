@@ -1,0 +1,225 @@
+@use '../../Styles/breakpoints.scss' as bp;
+
+.support {
+  height: 100%;
+  padding-left: 60px;
+  width: 100%;
+  max-width: 76.875rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include bp.tablet {
+    padding: 0px;
+  }
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      height: 450px;
+    }
+  }
+
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* Минималистичный скроллбар */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Скрываем стрелочки скроллбара */
+    &::-webkit-scrollbar-button {
+      height: 0;
+      width: 0;
+      display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  }
+
+  .message {
+    display: flex;
+    gap: 10px;
+    max-width: 70%;
+    padding: 0 20px;
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    &.user-message {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+
+      .message-content {
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    &.support-message {
+      align-self: flex-start;
+
+      .message-content {
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    @media (max-width: 768px) {
+      max-width: 85%;
+      padding: 0 10px;
+    }
+  }
+
+  .message-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .message-content {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .message-text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  .message-time {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    align-self: flex-end;
+  }
+
+  .message-input-form {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+      padding: 12px;
+    }
+  }
+
+  .chat-input-container {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 1px solid rgba(215, 215, 215, 0.1);
+    box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.06);
+
+    @media (max-width: 768px) {
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+
+  .chat-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    outline: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .send-button-icon {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+      transition: opacity 0.2s;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
+    }
+  }
+}
