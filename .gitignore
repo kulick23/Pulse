@@ -20,6 +20,7 @@
 
 # archived local experiments
 /legacy-projects
+/linkedin-screenshots
 
 # misc
 .DS_Store
