@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './SliderBar.scss';
-import bagIcon from '../../assets/icons/bag.svg';
-import listIcon from '../../assets/icons/list.svg';
-import supportIcon from '../../assets/icons/support.svg';
+import bagIcon from '../../Assets/Icons/bag.svg';
+import listIcon from '../../Assets/Icons/list.svg';
+import supportIcon from '../../Assets/Icons/support.svg';
 
 interface SliderBarProps {
   activeTab: string;

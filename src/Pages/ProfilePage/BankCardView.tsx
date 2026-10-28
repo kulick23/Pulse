@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BankGlyph, BankGlyphName } from './BankGlyph';
-import cardArtwork from '../../assets/Bank/card-byn.png';
-import driveOffer from '../../assets/Bank/cashback-food.webp';
-import driveMark from '../../assets/Bank/cashback-drive.webp';
-import partnerOne from '../../assets/Bank/cashback-partner-1.webp';
-import partnerTwo from '../../assets/Bank/cashback-partner-2.webp';
-import benefitsPro from '../../assets/Bank/benefits-pro.webp';
+import cardArtwork from '../../Assets/Bank/card-byn.png';
+import driveOffer from '../../Assets/Bank/cashback-food.webp';
+import driveMark from '../../Assets/Bank/cashback-drive.webp';
+import partnerOne from '../../Assets/Bank/cashback-partner-1.webp';
+import partnerTwo from '../../Assets/Bank/cashback-partner-2.webp';
+import benefitsPro from '../../Assets/Bank/benefits-pro.webp';
 import { LedgerTransaction, useBankLedger } from './bankLedger';
 import { BankMoreFlow, MoreFlowKey } from './BankMoreFlow';
 import { useBankPreferences } from './bankPreferences';

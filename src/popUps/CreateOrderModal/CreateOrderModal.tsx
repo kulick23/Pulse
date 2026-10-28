@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CreateOrderModal.scss';
 import iImg from '../../Assets/Icons/i.svg';
-import uploadIcon from '../../assets/icons/file.svg';
+import uploadIcon from '../../Assets/Icons/file.svg';
 import { useSendRequestMutation } from '../../redux/order/api';
 import { useTranslation } from 'react-i18next';
 
